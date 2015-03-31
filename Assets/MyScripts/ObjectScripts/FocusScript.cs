@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
-using System;
+using DataModel;
 
 
 public class FocusScript : MonoBehaviour {
 
 	public SMKCameraUtilities cameraRig;
+	public bool debugMode;
 	public float timeNeededToEnterFocus;
 	public float timeNeededToExitFocus;
 
@@ -17,11 +18,15 @@ public class FocusScript : MonoBehaviour {
 	private float exitCenterTime;
 	private float enteredFocusTime;
 	private float exitFocusTime;
-	private float focusDuration;
+
+	private DataCollecting dataCollector;
 
 	// Use this for initializationuni
 	void Start () {
 		
+		if(timeNeededToEnterFocus == 0) timeNeededToEnterFocus = 3;
+		if(timeNeededToExitFocus == 0) timeNeededToExitFocus = 3;
+
 		itIsVisible = false;
 		centered = false;
 		inFocus = false;
@@ -42,13 +47,15 @@ public class FocusScript : MonoBehaviour {
 		else
 		{
 			//DBG*******
-			GetComponent<Renderer>().material.color = new Color(1,0,0,1);
+			if(debugMode)
+			{
+				GetComponent<Renderer>().material.color = new Color(1,0,0,1);
+			}
 			//DBG*******
 		}
 
 
 	}
-
 
 
 	void OnBecameVisible()
@@ -69,11 +76,24 @@ public class FocusScript : MonoBehaviour {
 //Functions to use
 	void enteredFocus ()
 	{
+
+
 		Debug.Log(enteredFocusTime);
 	}
 
 	void exitFocus()
 	{
+
+		FocusEvent focusEvent = new FocusEvent(gameObject.name,enteredFocusTime,exitFocusTime);
+	
+		Object[] objs = GameObject.FindGameObjectsWithTag("GlobalManager");
+		if(objs != null)
+		{
+			GameObject generalManager = objs[0] as GameObject;
+			EventManager eventManager = generalManager.GetComponent<EventManager>();
+			eventManager.addFocusEvent(focusEvent);
+		}
+
 		Debug.Log(enteredFocusTime);
 		Debug.Log(exitFocusTime);
 		Debug.Log(exitFocusTime - enteredFocusTime);
@@ -93,8 +113,11 @@ public class FocusScript : MonoBehaviour {
 			}
 
 			//DBG*************
-			if(inFocus == false){
-			GetComponent<Renderer>().material.color = new Color(0,1,1,1); //cyan
+			if(debugMode)
+			{
+				if(inFocus == false){
+				GetComponent<Renderer>().material.color = new Color(0,1,1,1); //cyan
+				}
 			}
 			//DBG*************
 
@@ -109,10 +132,13 @@ public class FocusScript : MonoBehaviour {
 			}	
 
 			//DBG***********
-			GetComponent<Renderer>().material.color = new Color(1,0,0,1);
+			if(debugMode)
+			{
+				GetComponent<Renderer>().material.color = new Color(1,0,0,1);
 
-			if(inFocus == true){
-				GetComponent<Renderer>().material.color = new Color(0.5f,0.5f,0,1);
+				if(inFocus == true){
+					GetComponent<Renderer>().material.color = new Color(0.5f,0.5f,0,1);
+				}
 			}
 			//DBG*************
 
@@ -127,7 +153,7 @@ public class FocusScript : MonoBehaviour {
 		if(centered && inFocus == false){
 
 			timeDiff = Time.time - enteredCenterTime;
-			if(timeDiff >= 1)
+			if(timeDiff >= timeNeededToEnterFocus)
 			{
 
 				enteredFocusTime = Time.time;
@@ -135,7 +161,10 @@ public class FocusScript : MonoBehaviour {
 				enteredFocus();
 
 				//DBG*************
-				GetComponent<Renderer>().material.color = new Color(0,1,0,1);
+				if(debugMode)
+				{
+					GetComponent<Renderer>().material.color = new Color(0,1,0,1);
+				}
 				//DBG*************
 
 			}
@@ -144,14 +173,17 @@ public class FocusScript : MonoBehaviour {
 		if((centered == false || itIsVisible == false) && inFocus == true)
 		{
 			timeDiff = Time.time - exitFocusTime;
-			if (timeDiff >= 1)
+			if (timeDiff >= timeNeededToExitFocus)
 			{
 				exitFocusTime = Time.time;
 				inFocus = false;
 				exitFocus();
 
 				//DBG***********
-				GetComponent<Renderer>().material.color = new Color(1,0,0,1);
+				if(debugMode)
+				{	
+					GetComponent<Renderer>().material.color = new Color(1,0,0,1);
+				}
 				//DBG***********
 			}
 		}
@@ -159,7 +191,10 @@ public class FocusScript : MonoBehaviour {
 		if(centered == true && inFocus == true)
 		{
 			//DBG*************
-			GetComponent<Renderer>().material.color = new Color(0,1,0,1);
+			if(debugMode)
+			{
+				GetComponent<Renderer>().material.color = new Color(0,1,0,1);
+			}
 			//DBG*************
 		}
 	}
