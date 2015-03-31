@@ -1,0 +1,1 @@
+{"user":{"first_name":"Razvanel", "family_name":"Brezulici", "sex":"male", "age":"20", "smoking_time":"19", "time_since_last_cigarette":"0.2"}, "event_list":[ {"name":"Cube1", "entered_focus_time":"12:34:49 AM", "exit_focus_time":"12:34:51 AM", "duration":"2.783317"} ]}

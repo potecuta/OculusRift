@@ -5,7 +5,7 @@ using SimpleJSON;
 
 namespace DataModel{
 
-	public class User : MonoBehaviour {
+	public class User {
 
 		private string firstName;
 		private string familyName;
