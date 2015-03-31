@@ -52,7 +52,7 @@ public class User : MonoBehaviour {
 			return smokingTime;
 		}
 		set{
-			if ( value != null)
+			if ( value > 0)
 			{
 				smokingTime = value;
 			}
@@ -64,7 +64,7 @@ public class User : MonoBehaviour {
 			return timeSinceLastCigarette;
 		}
 		set{
-			if ( value != null)
+			if ( value > 0)
 			{
 				timeSinceLastCigarette = value;
 			}
