@@ -12,7 +12,7 @@ public class FocusScript : MonoBehaviour {
 
 	private bool itIsVisible;
 	private bool centered;
-	private bool inFocus;
+	private bool focused;
 
 	private float enteredCenterTime;
 	private float exitCenterTime;
@@ -20,6 +20,18 @@ public class FocusScript : MonoBehaviour {
 	private float exitFocusTime;
 
 	private DataCollecting dataCollector;
+
+	public bool Centered{
+		get{ 
+			return centered;
+		}
+	}
+
+	public bool Focused{
+		get {
+			return focused;
+		}
+	}
 
 	// Use this for initializationuni
 	void Start () {
@@ -29,7 +41,7 @@ public class FocusScript : MonoBehaviour {
 
 		itIsVisible = false;
 		centered = false;
-		inFocus = false;
+		focused = false;
 	}
 	
 
@@ -41,7 +53,7 @@ public class FocusScript : MonoBehaviour {
 			
 			centered = checkIfCentered();
 
-			checkIfInFocus();
+			checkIfFocused();
 
 		}
 		else
@@ -115,7 +127,7 @@ public class FocusScript : MonoBehaviour {
 			//DBG*************
 			if(debugMode)
 			{
-				if(inFocus == false){
+				if(focused == false){
 				GetComponent<Renderer>().material.color = new Color(0,1,1,1); //cyan
 				}
 			}
@@ -136,7 +148,7 @@ public class FocusScript : MonoBehaviour {
 			{
 				GetComponent<Renderer>().material.color = new Color(1,0,0,1);
 
-				if(inFocus == true){
+				if(focused == true){
 					GetComponent<Renderer>().material.color = new Color(0.5f,0.5f,0,1);
 				}
 			}
@@ -146,18 +158,18 @@ public class FocusScript : MonoBehaviour {
 		}
 	}
 
-	void checkIfInFocus()
+	void checkIfFocused()
 	{
 		float timeDiff;
 
-		if(centered && inFocus == false){
+		if(centered && focused == false){
 
 			timeDiff = Time.time - enteredCenterTime;
 			if(timeDiff >= timeNeededToEnterFocus)
 			{
 
 				enteredFocusTime = Time.time;
-				inFocus = true;
+				focused = true;
 				enteredFocus();
 
 				//DBG*************
@@ -170,13 +182,13 @@ public class FocusScript : MonoBehaviour {
 			}
 		}
 
-		if((centered == false || itIsVisible == false) && inFocus == true)
+		if((centered == false || itIsVisible == false) && focused == true)
 		{
 			timeDiff = Time.time - exitFocusTime;
 			if (timeDiff >= timeNeededToExitFocus)
 			{
 				exitFocusTime = Time.time;
-				inFocus = false;
+				focused = false;
 				exitFocus();
 
 				//DBG***********
@@ -188,7 +200,7 @@ public class FocusScript : MonoBehaviour {
 			}
 		}
 
-		if(centered == true && inFocus == true)
+		if(centered == true && focused == true)
 		{
 			//DBG*************
 			if(debugMode)
