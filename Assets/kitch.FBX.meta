@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 2e4436d963508a24d9b925c3997c9e3d
+timeCreated: 1427897961
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Camera01
+    100004: Camera01.Target
+    100006: Cube
+    100008: //RootNode
+    100010: Lamp
+    100012: Layer:BIM
+    100014: Layer:BIO
+    100016: Layer:Cabinet
+    100018: Layer:Glass
+    100020: Layer:Granite
+    100022: Layer:Handle
+    100024: Layer:Shutter
+    100026: Layer:Skirting
+    100028: Layer:Tiles
+    100030: Layer:Wall
+    100032: Omni01
+    100034: Plane
+    100036: Plane01
+    400000: Camera
+    400002: Camera01
+    400004: Camera01.Target
+    400006: Cube
+    400008: //RootNode
+    400010: Lamp
+    400012: Layer:BIM
+    400014: Layer:BIO
+    400016: Layer:Cabinet
+    400018: Layer:Glass
+    400020: Layer:Granite
+    400022: Layer:Handle
+    400024: Layer:Shutter
+    400026: Layer:Skirting
+    400028: Layer:Tiles
+    400030: Layer:Wall
+    400032: Omni01
+    400034: Plane
+    400036: Plane01
+    2300000: Cube
+    2300002: Layer:BIM
+    2300004: Layer:BIO
+    2300006: Layer:Cabinet
+    2300008: Layer:Glass
+    2300010: Layer:Granite
+    2300012: Layer:Handle
+    2300014: Layer:Shutter
+    2300016: Layer:Skirting
+    2300018: Layer:Tiles
+    2300020: Layer:Wall
+    2300022: Plane
+    2300024: Plane01
+    3300000: Cube
+    3300002: Layer:BIM
+    3300004: Layer:BIO
+    3300006: Layer:Cabinet
+    3300008: Layer:Glass
+    3300010: Layer:Granite
+    3300012: Layer:Handle
+    3300014: Layer:Shutter
+    3300016: Layer:Skirting
+    3300018: Layer:Tiles
+    3300020: Layer:Wall
+    3300022: Plane
+    3300024: Plane01
+    4300000: Plane
+    4300002: Plane01
+    4300004: Layer:Tiles
+    4300006: Layer:Granite
+    4300008: Layer:Handle
+    4300010: Layer:Glass
+    4300012: Layer:BIO
+    4300014: Layer:BIM
+    4300016: Layer:Skirting
+    4300018: Layer:Cabinet
+    4300020: Layer:Shutter
+    4300022: Layer:Wall
+    4300024: Cube
+    7400000: Plane|Camera01.Target|Take 001|BaseLayer
+    7400002: Plane|Camera01|Take 001|BaseLayer
+    7400004: Plane|Layer:BIM|Take 001|BaseLayer
+    7400006: Plane|Layer:BIO|Take 001|BaseLayer
+    7400008: Plane|Layer:Cabinet|Take 001|BaseLayer
+    7400010: Plane|Layer:DOOR-win|Take 001|BaseLayer
+    7400012: Plane|Layer:door|Take 001|BaseLayer
+    7400014: Plane|Layer:Glass|Take 001|BaseLayer
+    7400016: Plane|Layer:Granite|Take 001|BaseLayer
+    7400018: Plane|Layer:Handle|Take 001|BaseLayer
+    7400020: Plane|Layer:Shutter|Take 001|BaseLayer
+    7400022: Plane|Layer:Skirting|Take 001|BaseLayer
+    7400024: Plane|Layer:Tiles|Take 001|BaseLayer
+    7400026: Plane|Layer:Wall|Take 001|BaseLayer
+    7400028: Plane|Omni01|Take 001|BaseLayer
+    7400030: Plane|Plane01|Take 001|BaseLayer
+    7400032: Omni01|Camera01.Target|Take 001|BaseLayer
+    7400034: Omni01|Camera01|Take 001|BaseLayer
+    7400036: Omni01|Layer:BIM|Take 001|BaseLayer
+    7400038: Omni01|Layer:BIO|Take 001|BaseLayer
+    7400040: Omni01|Layer:Cabinet|Take 001|BaseLayer
+    7400042: Omni01|Layer:DOOR-win|Take 001|BaseLayer
+    7400044: Omni01|Layer:door|Take 001|BaseLayer
+    7400046: Omni01|Layer:Glass|Take 001|BaseLayer
+    7400048: Omni01|Layer:Granite|Take 001|BaseLayer
+    7400050: Omni01|Layer:Handle|Take 001|BaseLayer
+    7400052: Omni01|Layer:Shutter|Take 001|BaseLayer
+    7400054: Omni01|Layer:Skirting|Take 001|BaseLayer
+    7400056: Omni01|Layer:Tiles|Take 001|BaseLayer
+    7400058: Omni01|Layer:Wall|Take 001|BaseLayer
+    7400060: Omni01|Omni01|Take 001|BaseLayer
+    7400062: Omni01|Plane01|Take 001|BaseLayer
+    7400064: Camera01.Target|Camera01.Target|Take 001|BaseLayer
+    7400066: Camera01.Target|Camera01|Take 001|BaseLayer
+    7400068: Camera01.Target|Layer:BIM|Take 001|BaseLayer
+    7400070: Camera01.Target|Layer:BIO|Take 001|BaseLayer
+    7400072: Camera01.Target|Layer:Cabinet|Take 001|BaseLayer
+    7400074: Camera01.Target|Layer:DOOR-win|Take 001|BaseLayer
+    7400076: Camera01.Target|Layer:door|Take 001|BaseLayer
+    7400078: Camera01.Target|Layer:Glass|Take 001|BaseLayer
+    7400080: Camera01.Target|Layer:Granite|Take 001|BaseLayer
+    7400082: Camera01.Target|Layer:Handle|Take 001|BaseLayer
+    7400084: Camera01.Target|Layer:Shutter|Take 001|BaseLayer
+    7400086: Camera01.Target|Layer:Skirting|Take 001|BaseLayer
+    7400088: Camera01.Target|Layer:Tiles|Take 001|BaseLayer
+    7400090: Camera01.Target|Layer:Wall|Take 001|BaseLayer
+    7400092: Camera01.Target|Omni01|Take 001|BaseLayer
+    7400094: Camera01.Target|Plane01|Take 001|BaseLayer
+    7400096: Camera01|Camera01.Target|Take 001|BaseLayer
+    7400098: Camera01|Camera01|Take 001|BaseLayer
+    7400100: Camera01|Layer:BIM|Take 001|BaseLayer
+    7400102: Camera01|Layer:BIO|Take 001|BaseLayer
+    7400104: Camera01|Layer:Cabinet|Take 001|BaseLayer
+    7400106: Camera01|Layer:DOOR-win|Take 001|BaseLayer
+    7400108: Camera01|Layer:door|Take 001|BaseLayer
+    7400110: Camera01|Layer:Glass|Take 001|BaseLayer
+    7400112: Camera01|Layer:Granite|Take 001|BaseLayer
+    7400114: Camera01|Layer:Handle|Take 001|BaseLayer
+    7400116: Camera01|Layer:Shutter|Take 001|BaseLayer
+    7400118: Camera01|Layer:Skirting|Take 001|BaseLayer
+    7400120: Camera01|Layer:Tiles|Take 001|BaseLayer
+    7400122: Camera01|Layer:Wall|Take 001|BaseLayer
+    7400124: Camera01|Omni01|Take 001|BaseLayer
+    7400126: Camera01|Plane01|Take 001|BaseLayer
+    7400128: Plane01|Camera01.Target|Take 001|BaseLayer
+    7400130: Plane01|Camera01|Take 001|BaseLayer
+    7400132: Plane01|Layer:BIM|Take 001|BaseLayer
+    7400134: Plane01|Layer:BIO|Take 001|BaseLayer
+    7400136: Plane01|Layer:Cabinet|Take 001|BaseLayer
+    7400138: Plane01|Layer:DOOR-win|Take 001|BaseLayer
+    7400140: Plane01|Layer:door|Take 001|BaseLayer
+    7400142: Plane01|Layer:Glass|Take 001|BaseLayer
+    7400144: Plane01|Layer:Granite|Take 001|BaseLayer
+    7400146: Plane01|Layer:Handle|Take 001|BaseLayer
+    7400148: Plane01|Layer:Shutter|Take 001|BaseLayer
+    7400150: Plane01|Layer:Skirting|Take 001|BaseLayer
+    7400152: Plane01|Layer:Tiles|Take 001|BaseLayer
+    7400154: Plane01|Layer:Wall|Take 001|BaseLayer
+    7400156: Plane01|Omni01|Take 001|BaseLayer
+    7400158: Plane01|Plane01|Take 001|BaseLayer
+    7400160: Layer:Tiles|Camera01.Target|Take 001|BaseLayer
+    7400162: Layer:Tiles|Camera01|Take 001|BaseLayer
+    7400164: Layer:Tiles|Layer:BIM|Take 001|BaseLayer
+    7400166: Layer:Tiles|Layer:BIO|Take 001|BaseLayer
+    7400168: Layer:Tiles|Layer:Cabinet|Take 001|BaseLayer
+    7400170: Layer:Tiles|Layer:DOOR-win|Take 001|BaseLayer
+    7400172: Layer:Tiles|Layer:door|Take 001|BaseLayer
+    7400174: Layer:Tiles|Layer:Glass|Take 001|BaseLayer
+    7400176: Layer:Tiles|Layer:Granite|Take 001|BaseLayer
+    7400178: Layer:Tiles|Layer:Handle|Take 001|BaseLayer
+    7400180: Layer:Tiles|Layer:Shutter|Take 001|BaseLayer
+    7400182: Layer:Tiles|Layer:Skirting|Take 001|BaseLayer
+    7400184: Layer:Tiles|Layer:Tiles|Take 001|BaseLayer
+    7400186: Layer:Tiles|Layer:Wall|Take 001|BaseLayer
+    7400188: Layer:Tiles|Omni01|Take 001|BaseLayer
+    7400190: Layer:Tiles|Plane01|Take 001|BaseLayer
+    7400192: Layer:Granite|Camera01.Target|Take 001|BaseLayer
+    7400194: Layer:Granite|Camera01|Take 001|BaseLayer
+    7400196: Layer:Granite|Layer:BIM|Take 001|BaseLayer
+    7400198: Layer:Granite|Layer:BIO|Take 001|BaseLayer
+    7400200: Layer:Granite|Layer:Cabinet|Take 001|BaseLayer
+    7400202: Layer:Granite|Layer:DOOR-win|Take 001|BaseLayer
+    7400204: Layer:Granite|Layer:door|Take 001|BaseLayer
+    7400206: Layer:Granite|Layer:Glass|Take 001|BaseLayer
+    7400208: Layer:Granite|Layer:Granite|Take 001|BaseLayer
+    7400210: Layer:Granite|Layer:Handle|Take 001|BaseLayer
+    7400212: Layer:Granite|Layer:Shutter|Take 001|BaseLayer
+    7400214: Layer:Granite|Layer:Skirting|Take 001|BaseLayer
+    7400216: Layer:Granite|Layer:Tiles|Take 001|BaseLayer
+    7400218: Layer:Granite|Layer:Wall|Take 001|BaseLayer
+    7400220: Layer:Granite|Omni01|Take 001|BaseLayer
+    7400222: Layer:Granite|Plane01|Take 001|BaseLayer
+    7400224: Layer:Handle|Camera01.Target|Take 001|BaseLayer
+    7400226: Layer:Handle|Camera01|Take 001|BaseLayer
+    7400228: Layer:Handle|Layer:BIM|Take 001|BaseLayer
+    7400230: Layer:Handle|Layer:BIO|Take 001|BaseLayer
+    7400232: Layer:Handle|Layer:Cabinet|Take 001|BaseLayer
+    7400234: Layer:Handle|Layer:DOOR-win|Take 001|BaseLayer
+    7400236: Layer:Handle|Layer:door|Take 001|BaseLayer
+    7400238: Layer:Handle|Layer:Glass|Take 001|BaseLayer
+    7400240: Layer:Handle|Layer:Granite|Take 001|BaseLayer
+    7400242: Layer:Handle|Layer:Handle|Take 001|BaseLayer
+    7400244: Layer:Handle|Layer:Shutter|Take 001|BaseLayer
+    7400246: Layer:Handle|Layer:Skirting|Take 001|BaseLayer
+    7400248: Layer:Handle|Layer:Tiles|Take 001|BaseLayer
+    7400250: Layer:Handle|Layer:Wall|Take 001|BaseLayer
+    7400252: Layer:Handle|Omni01|Take 001|BaseLayer
+    7400254: Layer:Handle|Plane01|Take 001|BaseLayer
+    7400256: Layer:Glass|Camera01.Target|Take 001|BaseLayer
+    7400258: Layer:Glass|Camera01|Take 001|BaseLayer
+    7400260: Layer:Glass|Layer:BIM|Take 001|BaseLayer
+    7400262: Layer:Glass|Layer:BIO|Take 001|BaseLayer
+    7400264: Layer:Glass|Layer:Cabinet|Take 001|BaseLayer
+    7400266: Layer:Glass|Layer:DOOR-win|Take 001|BaseLayer
+    7400268: Layer:Glass|Layer:door|Take 001|BaseLayer
+    7400270: Layer:Glass|Layer:Glass|Take 001|BaseLayer
+    7400272: Layer:Glass|Layer:Granite|Take 001|BaseLayer
+    7400274: Layer:Glass|Layer:Handle|Take 001|BaseLayer
+    7400276: Layer:Glass|Layer:Shutter|Take 001|BaseLayer
+    7400278: Layer:Glass|Layer:Skirting|Take 001|BaseLayer
+    7400280: Layer:Glass|Layer:Tiles|Take 001|BaseLayer
+    7400282: Layer:Glass|Layer:Wall|Take 001|BaseLayer
+    7400284: Layer:Glass|Omni01|Take 001|BaseLayer
+    7400286: Layer:Glass|Plane01|Take 001|BaseLayer
+    7400288: Layer:BIO|Camera01.Target|Take 001|BaseLayer
+    7400290: Layer:BIO|Camera01|Take 001|BaseLayer
+    7400292: Layer:BIO|Layer:BIM|Take 001|BaseLayer
+    7400294: Layer:BIO|Layer:BIO|Take 001|BaseLayer
+    7400296: Layer:BIO|Layer:Cabinet|Take 001|BaseLayer
+    7400298: Layer:BIO|Layer:DOOR-win|Take 001|BaseLayer
+    7400300: Layer:BIO|Layer:door|Take 001|BaseLayer
+    7400302: Layer:BIO|Layer:Glass|Take 001|BaseLayer
+    7400304: Layer:BIO|Layer:Granite|Take 001|BaseLayer
+    7400306: Layer:BIO|Layer:Handle|Take 001|BaseLayer
+    7400308: Layer:BIO|Layer:Shutter|Take 001|BaseLayer
+    7400310: Layer:BIO|Layer:Skirting|Take 001|BaseLayer
+    7400312: Layer:BIO|Layer:Tiles|Take 001|BaseLayer
+    7400314: Layer:BIO|Layer:Wall|Take 001|BaseLayer
+    7400316: Layer:BIO|Omni01|Take 001|BaseLayer
+    7400318: Layer:BIO|Plane01|Take 001|BaseLayer
+    7400320: Layer:BIM|Camera01.Target|Take 001|BaseLayer
+    7400322: Layer:BIM|Camera01|Take 001|BaseLayer
+    7400324: Layer:BIM|Layer:BIM|Take 001|BaseLayer
+    7400326: Layer:BIM|Layer:BIO|Take 001|BaseLayer
+    7400328: Layer:BIM|Layer:Cabinet|Take 001|BaseLayer
+    7400330: Layer:BIM|Layer:DOOR-win|Take 001|BaseLayer
+    7400332: Layer:BIM|Layer:door|Take 001|BaseLayer
+    7400334: Layer:BIM|Layer:Glass|Take 001|BaseLayer
+    7400336: Layer:BIM|Layer:Granite|Take 001|BaseLayer
+    7400338: Layer:BIM|Layer:Handle|Take 001|BaseLayer
+    7400340: Layer:BIM|Layer:Shutter|Take 001|BaseLayer
+    7400342: Layer:BIM|Layer:Skirting|Take 001|BaseLayer
+    7400344: Layer:BIM|Layer:Tiles|Take 001|BaseLayer
+    7400346: Layer:BIM|Layer:Wall|Take 001|BaseLayer
+    7400348: Layer:BIM|Omni01|Take 001|BaseLayer
+    7400350: Layer:BIM|Plane01|Take 001|BaseLayer
+    7400352: Layer:Skirting|Camera01.Target|Take 001|BaseLayer
+    7400354: Layer:Skirting|Camera01|Take 001|BaseLayer
+    7400356: Layer:Skirting|Layer:BIM|Take 001|BaseLayer
+    7400358: Layer:Skirting|Layer:BIO|Take 001|BaseLayer
+    7400360: Layer:Skirting|Layer:Cabinet|Take 001|BaseLayer
+    7400362: Layer:Skirting|Layer:DOOR-win|Take 001|BaseLayer
+    7400364: Layer:Skirting|Layer:door|Take 001|BaseLayer
+    7400366: Layer:Skirting|Layer:Glass|Take 001|BaseLayer
+    7400368: Layer:Skirting|Layer:Granite|Take 001|BaseLayer
+    7400370: Layer:Skirting|Layer:Handle|Take 001|BaseLayer
+    7400372: Layer:Skirting|Layer:Shutter|Take 001|BaseLayer
+    7400374: Layer:Skirting|Layer:Skirting|Take 001|BaseLayer
+    7400376: Layer:Skirting|Layer:Tiles|Take 001|BaseLayer
+    7400378: Layer:Skirting|Layer:Wall|Take 001|BaseLayer
+    7400380: Layer:Skirting|Omni01|Take 001|BaseLayer
+    7400382: Layer:Skirting|Plane01|Take 001|BaseLayer
+    7400384: Layer:Cabinet|Camera01.Target|Take 001|BaseLayer
+    7400386: Layer:Cabinet|Camera01|Take 001|BaseLayer
+    7400388: Layer:Cabinet|Layer:BIM|Take 001|BaseLayer
+    7400390: Layer:Cabinet|Layer:BIO|Take 001|BaseLayer
+    7400392: Layer:Cabinet|Layer:Cabinet|Take 001|BaseLayer
+    7400394: Layer:Cabinet|Layer:DOOR-win|Take 001|BaseLayer
+    7400396: Layer:Cabinet|Layer:door|Take 001|BaseLayer
+    7400398: Layer:Cabinet|Layer:Glass|Take 001|BaseLayer
+    7400400: Layer:Cabinet|Layer:Granite|Take 001|BaseLayer
+    7400402: Layer:Cabinet|Layer:Handle|Take 001|BaseLayer
+    7400404: Layer:Cabinet|Layer:Shutter|Take 001|BaseLayer
+    7400406: Layer:Cabinet|Layer:Skirting|Take 001|BaseLayer
+    7400408: Layer:Cabinet|Layer:Tiles|Take 001|BaseLayer
+    7400410: Layer:Cabinet|Layer:Wall|Take 001|BaseLayer
+    7400412: Layer:Cabinet|Omni01|Take 001|BaseLayer
+    7400414: Layer:Cabinet|Plane01|Take 001|BaseLayer
+    7400416: Layer:Shutter|Camera01.Target|Take 001|BaseLayer
+    7400418: Layer:Shutter|Camera01|Take 001|BaseLayer
+    7400420: Layer:Shutter|Layer:BIM|Take 001|BaseLayer
+    7400422: Layer:Shutter|Layer:BIO|Take 001|BaseLayer
+    7400424: Layer:Shutter|Layer:Cabinet|Take 001|BaseLayer
+    7400426: Layer:Shutter|Layer:DOOR-win|Take 001|BaseLayer
+    7400428: Layer:Shutter|Layer:door|Take 001|BaseLayer
+    7400430: Layer:Shutter|Layer:Glass|Take 001|BaseLayer
+    7400432: Layer:Shutter|Layer:Granite|Take 001|BaseLayer
+    7400434: Layer:Shutter|Layer:Handle|Take 001|BaseLayer
+    7400436: Layer:Shutter|Layer:Shutter|Take 001|BaseLayer
+    7400438: Layer:Shutter|Layer:Skirting|Take 001|BaseLayer
+    7400440: Layer:Shutter|Layer:Tiles|Take 001|BaseLayer
+    7400442: Layer:Shutter|Layer:Wall|Take 001|BaseLayer
+    7400444: Layer:Shutter|Omni01|Take 001|BaseLayer
+    7400446: Layer:Shutter|Plane01|Take 001|BaseLayer
+    7400448: Layer:Wall|Camera01.Target|Take 001|BaseLayer
+    7400450: Layer:Wall|Camera01|Take 001|BaseLayer
+    7400452: Layer:Wall|Layer:BIM|Take 001|BaseLayer
+    7400454: Layer:Wall|Layer:BIO|Take 001|BaseLayer
+    7400456: Layer:Wall|Layer:Cabinet|Take 001|BaseLayer
+    7400458: Layer:Wall|Layer:DOOR-win|Take 001|BaseLayer
+    7400460: Layer:Wall|Layer:door|Take 001|BaseLayer
+    7400462: Layer:Wall|Layer:Glass|Take 001|BaseLayer
+    7400464: Layer:Wall|Layer:Granite|Take 001|BaseLayer
+    7400466: Layer:Wall|Layer:Handle|Take 001|BaseLayer
+    7400468: Layer:Wall|Layer:Shutter|Take 001|BaseLayer
+    7400470: Layer:Wall|Layer:Skirting|Take 001|BaseLayer
+    7400472: Layer:Wall|Layer:Tiles|Take 001|BaseLayer
+    7400474: Layer:Wall|Layer:Wall|Take 001|BaseLayer
+    7400476: Layer:Wall|Omni01|Take 001|BaseLayer
+    7400478: Layer:Wall|Plane01|Take 001|BaseLayer
+    7400480: Cube|Camera01.Target|Take 001|BaseLayer
+    7400482: Cube|Camera01|Take 001|BaseLayer
+    7400484: Cube|Layer:BIM|Take 001|BaseLayer
+    7400486: Cube|Layer:BIO|Take 001|BaseLayer
+    7400488: Cube|Layer:Cabinet|Take 001|BaseLayer
+    7400490: Cube|Layer:DOOR-win|Take 001|BaseLayer
+    7400492: Cube|Layer:door|Take 001|BaseLayer
+    7400494: Cube|Layer:Glass|Take 001|BaseLayer
+    7400496: Cube|Layer:Granite|Take 001|BaseLayer
+    7400498: Cube|Layer:Handle|Take 001|BaseLayer
+    7400500: Cube|Layer:Shutter|Take 001|BaseLayer
+    7400502: Cube|Layer:Skirting|Take 001|BaseLayer
+    7400504: Cube|Layer:Tiles|Take 001|BaseLayer
+    7400506: Cube|Layer:Wall|Take 001|BaseLayer
+    7400508: Cube|Omni01|Take 001|BaseLayer
+    7400510: Cube|Plane01|Take 001|BaseLayer
+    7400512: Lamp|Camera01.Target|Take 001|BaseLayer
+    7400514: Lamp|Camera01|Take 001|BaseLayer
+    7400516: Lamp|Layer:BIM|Take 001|BaseLayer
+    7400518: Lamp|Layer:BIO|Take 001|BaseLayer
+    7400520: Lamp|Layer:Cabinet|Take 001|BaseLayer
+    7400522: Lamp|Layer:DOOR-win|Take 001|BaseLayer
+    7400524: Lamp|Layer:door|Take 001|BaseLayer
+    7400526: Lamp|Layer:Glass|Take 001|BaseLayer
+    7400528: Lamp|Layer:Granite|Take 001|BaseLayer
+    7400530: Lamp|Layer:Handle|Take 001|BaseLayer
+    7400532: Lamp|Layer:Shutter|Take 001|BaseLayer
+    7400534: Lamp|Layer:Skirting|Take 001|BaseLayer
+    7400536: Lamp|Layer:Tiles|Take 001|BaseLayer
+    7400538: Lamp|Layer:Wall|Take 001|BaseLayer
+    7400540: Lamp|Omni01|Take 001|BaseLayer
+    7400542: Lamp|Plane01|Take 001|BaseLayer
+    7400544: Camera|Camera01.Target|Take 001|BaseLayer
+    7400546: Camera|Camera01|Take 001|BaseLayer
+    7400548: Camera|Layer:BIM|Take 001|BaseLayer
+    7400550: Camera|Layer:BIO|Take 001|BaseLayer
+    7400552: Camera|Layer:Cabinet|Take 001|BaseLayer
+    7400554: Camera|Layer:DOOR-win|Take 001|BaseLayer
+    7400556: Camera|Layer:door|Take 001|BaseLayer
+    7400558: Camera|Layer:Glass|Take 001|BaseLayer
+    7400560: Camera|Layer:Granite|Take 001|BaseLayer
+    7400562: Camera|Layer:Handle|Take 001|BaseLayer
+    7400564: Camera|Layer:Shutter|Take 001|BaseLayer
+    7400566: Camera|Layer:Skirting|Take 001|BaseLayer
+    7400568: Camera|Layer:Tiles|Take 001|BaseLayer
+    7400570: Camera|Layer:Wall|Take 001|BaseLayer
+    7400572: Camera|Omni01|Take 001|BaseLayer
+    7400574: Camera|Plane01|Take 001|BaseLayer
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
