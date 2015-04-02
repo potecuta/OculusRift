@@ -201,7 +201,6 @@ public class OVRGUI
 		calcPosSize.y  = Y * sSY;
 		calcPosSize.height = hY * sSY;
 	}
-	
 }
 
 
