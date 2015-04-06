@@ -35,13 +35,13 @@ public class FocusScript : MonoBehaviour {
 
 
     GameObject globalGameObject;
-    UIManager uiMgr;
+    // UIManager uiMgr;
 	// Use this for initializationuni
 	void Start () {
 
-        globalGameObject = GameObject.Find("_GlobalManager"); 
-        uiMgr = (UIManager)globalGameObject.GetComponent("UIManager"); 
-        uiMgr.printOnScreenMessage("123123", 2);
+        // globalGameObject = GameObject.Find("_GlobalManager"); 
+        // uiMgr = (UIManager)globalGameObject.GetComponent("UIManager"); 
+        // uiMgr.printOnScreenMessage("123123", 2);
 
 		if(timeNeededToEnterFocus == 0) timeNeededToEnterFocus = 3;
 		if(timeNeededToExitFocus == 0) timeNeededToExitFocus = 3;
@@ -177,7 +177,7 @@ public class FocusScript : MonoBehaviour {
                 
 				enteredFocusTime = Time.time;
 				focused = true;
-                uiMgr.printOnScreenMessage("Focused", 3);
+                // uiMgr.printOnScreenMessage("Focused", 3);
 				enteredFocus();
 
 				//DBG*************
@@ -197,7 +197,7 @@ public class FocusScript : MonoBehaviour {
 			{
 				exitFocusTime = Time.time;
 				focused = false;
-                uiMgr.printOnScreenMessage("NotFocused", 3);
+                // uiMgr.printOnScreenMessage("NotFocused", 3);
 				exitFocus();
 
 				//DBG***********
