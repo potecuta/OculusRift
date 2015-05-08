@@ -48,7 +48,9 @@ public class HUDComponent : MonoBehaviour {
         hudGO = gameObject;
         hudPanelBkgrGO = gameObject.transform.FindChild("hudPanelBkgrGO").gameObject;
         hudTextGO = hudPanelBkgrGO.transform.FindChild("hudTextGO").gameObject;
-        
+
+        GameObject cameraRig = GameObject.FindGameObjectWithTag("MainCamera");
+
         //CanvasSettings
         Canvas cHandler = hudGO.GetComponent<Canvas>();
             cHandler.renderMode = RenderMode.WorldSpace;
@@ -62,7 +64,7 @@ public class HUDComponent : MonoBehaviour {
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, .1f);
         //rtHandler.localScale = new Vector3(.5f, .1f, .2f);
         rtHandler.localPosition = new Vector3(0, 1.15f, 2.5f);
-        rtHandler.localEulerAngles = Vector3.zero;
+        rtHandler.localEulerAngles = cameraRig.transform.localEulerAngles;
         
         CanvasScaler csHandler = hudGO.GetComponent<CanvasScaler>();
             csHandler.dynamicPixelsPerUnit = 1;
