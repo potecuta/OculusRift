@@ -18,15 +18,15 @@ public class UIManager : MonoBehaviour
    //     }
      //   catch(UnityException)
        // {
-            InitializeHUDComponent();
-            GameObject canvas = GameObject.FindGameObjectWithTag("OnScreenCanvas");
-            onScreenCanvasHUDComponent = canvas.GetComponent<HUDComponent>();
-            printOnScreenMessage("Welcome! Вяш эи пытынтёюм ылаборарэт, эи видэ лебыр дылыктуч эжт. Хабэо факилиз позтюлант ед мэя, дольор кончэтытюр ан нык. Дуо трётанё трактатоз нэ. Векж дёко едквюэ ыт, про ан алиё эрат констятюам, конгуы лыгэндоч патриоквюы ед эож.", 25);
+            // InitializeHUDComponent();
+            // GameObject canvas = GameObject.FindGameObjectWithTag("OnScreenCanvas");
+            // onScreenCanvasHUDComponent = canvas.GetComponent<HUDComponent>();
+            // printOnScreenMessage("Welcome! Вяш эи пытынтёюм ылаборарэт, эи видэ лебыр дылыктуч эжт. Хабэо факилиз позтюлант ед мэя, дольор кончэтытюр ан нык. Дуо трётанё трактатоз нэ. Векж дёко едквюэ ыт, про ан алиё эрат констятюам, конгуы лыгэндоч патриоквюы ед эож.", 25);
 
-            GameObject gm = GameObject.FindGameObjectWithTag("GlobalManager");
-            HTTPRequest hr = gm.GetComponent<HTTPRequest>();
-            WWW www = hr.GET("http://google.com");
-            printOnScreenMessage(www.text, 25);
+            // GameObject gm = GameObject.FindGameObjectWithTag("GlobalManager");
+            // HTTPRequest hr = gm.GetComponent<HTTPRequest>();
+            // WWW www = hr.GET("http://google.com");
+            // printOnScreenMessage(www.text, 200);
         //}
         
      }
@@ -40,6 +40,7 @@ public class UIManager : MonoBehaviour
     public void InitializeHUDComponent()
     {
         OVRPlayerController player = GameObject.FindObjectOfType<OVRPlayerController>();
+        GameObject centerEyeObj = GameObject.FindGameObjectWithTag("MainCamera");
             GameObject hudGO;
             GameObject hudTextGO;
             GameObject hudPanelBkgrGO;
@@ -53,7 +54,7 @@ public class UIManager : MonoBehaviour
             hudTextGO.name = "hudTextGO";
             hudPanelBkgrGO.name = "hudPanelBkgrGO";
 
-            hudGO.transform.parent = player.transform;
+            hudGO.transform.parent = centerEyeObj.transform;
             hudTextGO.transform.parent = hudPanelBkgrGO.transform;
             hudPanelBkgrGO.transform.parent = hudGO.transform;
             

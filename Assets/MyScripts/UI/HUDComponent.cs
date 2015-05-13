@@ -36,11 +36,18 @@ public class HUDComponent : MonoBehaviour {
 
     public void ResetToDefaultCoords()
     {
+        GameObject cameraRig = GameObject.FindGameObjectWithTag("MainCamera");
+
+
         RectTransform rtHandler = GetComponent<RectTransform>();
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 5);
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 5);
-        rtHandler.localPosition = new Vector3(0, 1.15f, 2.5f);
-        rtHandler.localEulerAngles = Vector3.zero;
+        rtHandler.localPosition = new Vector3(0.0f, 0.0f, 1.5f);
+        
+        Vector3 rotationMask = new Vector3(1, 1, 1);
+         rtHandler.transform.RotateAround(cameraRig.transform.position, rotationMask, 0.5f);
+
+
     }
 
     public void InitiateSettings()
@@ -59,12 +66,11 @@ public class HUDComponent : MonoBehaviour {
         
         rtHandler.anchorMax = Vector2.zero;
         rtHandler.anchorMin = Vector2.zero;
-        rtHandler.pivot = new Vector2(.5f, .5f);
+        rtHandler.pivot = new Vector2(0.5f, 0.5f);
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, .1f);
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, .1f);
         //rtHandler.localScale = new Vector3(.5f, .1f, .2f);
-        rtHandler.localPosition = new Vector3(0, 1.15f, 2.5f);
-        rtHandler.localEulerAngles = cameraRig.transform.localEulerAngles;
+        rtHandler.localPosition = new Vector3(10.0f, 1.7f, 0.5f);
         
         CanvasScaler csHandler = hudGO.GetComponent<CanvasScaler>();
             csHandler.dynamicPixelsPerUnit = 1;
@@ -73,7 +79,7 @@ public class HUDComponent : MonoBehaviour {
             grHandler.ignoreReversedGraphics = true;
             grHandler.blockingObjects = GraphicRaycaster.BlockingObjects.None;
         defaultCoords = true;
-
+    
         //TextSettings
         Text tHandler = hudTextGO.GetComponent<Text>();
             tHandler.font = Resources.Load<Font>("DINPro-Bold");
