@@ -24,7 +24,6 @@ public class SMKCameraUtilities : MonoBehaviour {
 		if( objRelativeToLeftEye.x > 0.40 && objRelativeToLeftEye.x < 0.60 && objRelativeToLeftEye.y > 0.40 && objRelativeToLeftEye.y < 0.60)
 		{
 
-			Debug.Log(obj.name);
 			float distance = Vector3.Distance (gameObject.transform.position, obj.transform.position);
 
 			if(distance < 13)

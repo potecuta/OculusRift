@@ -32,6 +32,7 @@ public class DataCollecting : MonoBehaviour {
 	{
 		populateJson();
 
+		Debug.Log("printJson");
 		System.IO.Directory.CreateDirectory(Environment.CurrentDirectory + @"/DateStranse");
 		System.IO.File.WriteAllText(Environment.CurrentDirectory + @"/DateStranse/" + fileName(), gameData.ToString());
 		

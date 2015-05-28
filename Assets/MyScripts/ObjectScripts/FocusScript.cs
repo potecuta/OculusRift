@@ -21,7 +21,6 @@ public class FocusScript : MonoBehaviour {
 	private float enteredFocusTime;
 	private float exitFocusTime;
 
-	private DataCollecting dataCollector;
 
 	public bool Centered{
 		get{ 

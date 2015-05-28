@@ -9,27 +9,33 @@ public class UIManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-      //  try
+       // try
        // {
-         //   GameObject canvas = GameObject.FindGameObjectWithTag("OnScreenCanvas");
-         //   onScreenCanvasHUDComponent = canvas.GetComponent<HUDComponent>();
-         //   printOnScreenMessage("Welcome! Вяш эи пытынтёюм ылаборарэт, эи видэ лебыр дылыктуч эжт. Хабэо факилиз позтюлант ед мэя, дольор кончэтытюр ан нык. Дуо трётанё трактатоз нэ. Векж дёко едквюэ ыт, про ан алиё эрат констятюам, конгуы лыгэндоч патриоквюы ед эож.", 25);
+       //     GameObject canvas = GameObject.FindGameObjectWithTag("OnScreenCanvas");
+       //     onScreenCanvasHUDComponent = canvas.GetComponent<HUDComponent>();
+       //     printOnScreenMessage("Welcome! Вяш эи пытынтёюм ылаборарэт, эи видэ лебыр дылыктуч эжт. Хабэо факилиз позтюлант ед мэя, дольор кончэтытюр ан нык. Дуо трётанё трактатоз нэ. Векж дёко едквюэ ыт, про ан алиё эрат констятюам, конгуы лыгэндоч патриоквюы ед эож.", 25);
     
-   //     }
-     //   catch(UnityException)
+       // }
+       // catch(UnityException)
        // {
-            // InitializeHUDComponent();
-            // GameObject canvas = GameObject.FindGameObjectWithTag("OnScreenCanvas");
-            // onScreenCanvasHUDComponent = canvas.GetComponent<HUDComponent>();
-            // printOnScreenMessage("Welcome! Вяш эи пытынтёюм ылаборарэт, эи видэ лебыр дылыктуч эжт. Хабэо факилиз позтюлант ед мэя, дольор кончэтытюр ан нык. Дуо трётанё трактатоз нэ. Векж дёко едквюэ ыт, про ан алиё эрат констятюам, конгуы лыгэндоч патриоквюы ед эож.", 25);
+       //      InitializeHUDComponent();
+       //      GameObject canvas = GameObject.FindGameObjectWithTag("OnScreenCanvas");
+       //      onScreenCanvasHUDComponent = canvas.GetComponent<HUDComponent>();
+       //      printOnScreenMessage("Welcome! Вяш эи пытынтёюм ылаборарэт, эи видэ лебыр дылыктуч эжт. Хабэо факилиз позтюлант ед мэя, дольор кончэтытюр ан нык. Дуо трётанё трактатоз нэ. Векж дёко едквюэ ыт, про ан алиё эрат констятюам, конгуы лыгэндоч патриоквюы ед эож.", 25);
 
-            // GameObject gm = GameObject.FindGameObjectWithTag("GlobalManager");
-            // HTTPRequest hr = gm.GetComponent<HTTPRequest>();
-            // WWW www = hr.GET("http://google.com");
-            // printOnScreenMessage(www.text, 200);
-        //}
+       //      // GameObject gm = GameObject.FindGameObjectWithTag("GlobalManager");
+       //      // HTTPRequest hr = gm.GetComponent<HTTPRequest>();
+       //      // WWW www = hr.GET("http://google.com");
+       //      // printOnScreenMessage(www.text, 200);
+       //  }
+    
+         InitializeHUDComponent();
+            GameObject canvas = GameObject.FindGameObjectWithTag("OnScreenCanvas");
+            onScreenCanvasHUDComponent = canvas.GetComponent<HUDComponent>();
+            printOnScreenMessage("Welcome! Вяш эи пытынтёюм ылаборарэт, эи видэ лебыр дылыктуч эжт. Хабэо факилиз позтюлант ед мэя, дольор кончэтытюр ан нык. Дуо трётанё трактатоз нэ. Векж дёко едквюэ ыт, про ан алиё эрат констятюам, конгуы лыгэндоч патриоквюы ед эож.", 25);
         
      }
+
 
     // Update is called once per frame
     void Update()
@@ -41,6 +47,10 @@ public class UIManager : MonoBehaviour
     {
         OVRPlayerController player = GameObject.FindObjectOfType<OVRPlayerController>();
         GameObject centerEyeObj = GameObject.FindGameObjectWithTag("MainCamera");
+
+            if(centerEyeObj != null)
+            {Debug.Log("gasit centerEye");}
+
             GameObject hudGO;
             GameObject hudTextGO;
             GameObject hudPanelBkgrGO;
@@ -59,7 +69,7 @@ public class UIManager : MonoBehaviour
             hudPanelBkgrGO.transform.parent = hudGO.transform;
             
             hudGO.AddComponent<Canvas>();
-            hudGO.AddComponent<RectTransform>();
+            // hudGO.AddComponent<RectTransform>();
             hudGO.AddComponent<CanvasScaler>();
             hudGO.AddComponent<GraphicRaycaster>();
             hudGO.AddComponent<HUDComponent>();
@@ -80,6 +90,7 @@ public class UIManager : MonoBehaviour
     {
         if (onScreenCanvasHUDComponent != null)
         {
+            Debug.Log("show text");
             onScreenCanvasHUDComponent.ShowCanvas();
             onScreenCanvasHUDComponent.SetText(text);
             onScreenCanvasHUDComponent.SetTimer(timeToShow);

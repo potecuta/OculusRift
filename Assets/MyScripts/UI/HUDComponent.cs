@@ -34,6 +34,24 @@ public class HUDComponent : MonoBehaviour {
     
 	}
 
+
+// var target : Transform; 
+//  var moveSpeed = 20; 
+//  var rotationSpeed = 5; 
+//  var myTransform : Transform;
+ 
+//  function Awake() { myTransform = transform; }
+//  function Start() {
+//  target = GameObject.FindWithTag("Player").transform; 
+//  }
+ 
+//  function Update () {
+ 
+//   myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
+//   Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed*Time.deltaTime); 
+//   myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+
+
     public void ResetToDefaultCoords()
     {
         GameObject cameraRig = GameObject.FindGameObjectWithTag("MainCamera");
@@ -43,15 +61,22 @@ public class HUDComponent : MonoBehaviour {
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 5);
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 5);
         rtHandler.localPosition = new Vector3(0.0f, 0.0f, 1.5f);
+        rtHandler.localScale = new Vector3(.5f, .1f, .2f);
+        // rtHandler.localPosition = new Vector3(10.0f, 1.7f, 0.5f);
         
-        Vector3 rotationMask = new Vector3(1, 1, 1);
-         rtHandler.transform.RotateAround(cameraRig.transform.position, rotationMask, 0.5f);
-
+        Transform myTransform = rtHandler.transform;
+        float rotationSpeed = 5.0f;
+        float moveSpeed = 20.0f;
+       	myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
+       		Quaternion.LookRotation(cameraRig.transform.position - myTransform.position),
+       		rotationSpeed*Time.deltaTime);
+       	rtHandler.position += myTransform.forward;
 
     }
 
     public void InitiateSettings()
     {
+    	Debug.Log("initiate settings");
         hudGO = gameObject;
         hudPanelBkgrGO = gameObject.transform.FindChild("hudPanelBkgrGO").gameObject;
         hudTextGO = hudPanelBkgrGO.transform.FindChild("hudTextGO").gameObject;
@@ -69,7 +94,7 @@ public class HUDComponent : MonoBehaviour {
         rtHandler.pivot = new Vector2(0.5f, 0.5f);
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, .1f);
         rtHandler.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, .1f);
-        //rtHandler.localScale = new Vector3(.5f, .1f, .2f);
+        rtHandler.localScale = new Vector3(.5f, .1f, .2f);
         rtHandler.localPosition = new Vector3(10.0f, 1.7f, 0.5f);
         
         CanvasScaler csHandler = hudGO.GetComponent<CanvasScaler>();
