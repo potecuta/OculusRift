@@ -5,10 +5,12 @@ using DataModel;
 
 public class FocusScript : MonoBehaviour {
 
-	public SMKCameraUtilities cameraRig;
 	public bool debugMode;
 	public float timeNeededToEnterFocus;
 	public float timeNeededToExitFocus;
+
+	private OVRPlayerController player;
+	private SMKCameraUtilities cameraRig;
 
 	private bool itIsVisible;
 	private bool centered;
@@ -43,8 +45,12 @@ public class FocusScript : MonoBehaviour {
         // uiMgr = (UIManager)globalGameObject.GetComponent("UIManager"); 
         // uiMgr.printOnScreenMessage("123123", 2);
 
-		if(timeNeededToEnterFocus == 0) timeNeededToEnterFocus = 3;
-		if(timeNeededToExitFocus == 0) timeNeededToExitFocus = 3;
+
+		if(timeNeededToEnterFocus == 0) timeNeededToEnterFocus = 1.5f;
+		if(timeNeededToExitFocus == 0) timeNeededToExitFocus = 1.5f;
+
+		player = GameObject.FindObjectOfType<OVRPlayerController>();
+		cameraRig = player.GetComponent<SMKCameraUtilities>();
 
 		itIsVisible = false;
 		centered = false;
@@ -80,6 +86,7 @@ public class FocusScript : MonoBehaviour {
 	void OnBecameVisible()
 	{
 		enabled = true;
+
 
 		itIsVisible = true;
 
