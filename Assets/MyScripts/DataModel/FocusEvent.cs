@@ -10,10 +10,14 @@ namespace DataModel
 		private string objectName;
 		private float enteredFocusTime;
 		private float exitFocusTime;
+        private string location;
+        private string type;
 
-		public FocusEvent(string name, float enterTime, float exitTime){
+		public FocusEvent(string name, string type, string location, float enterTime, float exitTime){
 			this.objectName = name;
-			this.enteredFocusTime = enterTime;
+            this.type = type;
+            this.location = location;
+            this.enteredFocusTime = enterTime;
 			this.exitFocusTime = exitTime;
 		}
 
@@ -49,9 +53,12 @@ namespace DataModel
 			exitTime = exitTime.ToLocalTime();
 
 			jsonToReturn ["name"] = objectName;
-			jsonToReturn ["entered_focus_time"] = enterTime.ToLongTimeString();
-			jsonToReturn ["exit_focus_time"] = exitTime.ToLongTimeString();
-			jsonToReturn ["duration"].AsFloat = exitFocusTime - enteredFocusTime; 
+            jsonToReturn ["location"] = location;
+            jsonToReturn["type"] = type;
+			//jsonToReturn ["entered_time"] = enterTime.ToString();
+			//jsonToReturn ["exit_time"] = exitTime.ToString();
+            double duratie = exitFocusTime - enteredFocusTime;
+			jsonToReturn ["duration"].AsInt = (int)duratie; 
 
 			return jsonToReturn;
 			
