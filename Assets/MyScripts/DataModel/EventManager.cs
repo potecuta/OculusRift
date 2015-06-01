@@ -33,16 +33,34 @@ public class EventManager : MonoBehaviour {
 		sortEventList();
 
 
-
 		foreach (FocusEvent element in eventList)
 		{
+
 			jsonToReturn.Add("eventList", element.getJson());
+
 		}
 
 
 		return jsonToReturn;
 	}
 
+    public void sendJson()
+    {
+        JSONArray jsonToReturn = new JSONArray();
+
+        sortEventList();
+
+        RequestManager reqMan = gameObject.GetComponent<RequestManager>();
+
+        foreach (FocusEvent element in eventList)
+        {
+
+            string js = element.getJson().ToString();
+           
+            reqMan.sendEvent(js);
+
+        }
+    }
 
 	private void sortEventList()
 	{

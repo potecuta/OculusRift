@@ -14,7 +14,20 @@ namespace DataModel
         private string type;
 
 		public FocusEvent(string name, string type, string location, float enterTime, float exitTime){
-			this.objectName = name;
+            if (location.Length == 0)
+            {
+                location = "NA";
+            }
+            if(name.Length == 0)
+            {
+                name = "NA";
+            }
+            if (type.Length == 0)
+            {
+                type = "NA";
+            }
+            
+            this.objectName = name;
             this.type = type;
             this.location = location;
             this.enteredFocusTime = enterTime;
