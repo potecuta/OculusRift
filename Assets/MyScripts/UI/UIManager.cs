@@ -4,7 +4,7 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
-    private HUDComponent onScreenCanvasHUDComponent;
+    public HUDComponent onScreenCanvasHUDComponent;
 
     // Use this for initialization
     void Start()
@@ -29,11 +29,11 @@ public class UIManager : MonoBehaviour
        //      // printOnScreenMessage(www.text, 200);
        //  }
     
-         InitializeHUDComponent();
+       /*  InitializeHUDComponent();
             GameObject canvas = GameObject.FindGameObjectWithTag("OnScreenCanvas");
             onScreenCanvasHUDComponent = canvas.GetComponent<HUDComponent>();
             printOnScreenMessage("Welcome! Вяш эи пытынтёюм ылаборарэт, эи видэ лебыр дылыктуч эжт. Хабэо факилиз позтюлант ед мэя, дольор кончэтытюр ан нык. Дуо трётанё трактатоз нэ. Векж дёко едквюэ ыт, про ан алиё эрат констятюам, конгуы лыгэндоч патриоквюы ед эож.", 25);
-        
+        */
      }
 
 

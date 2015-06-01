@@ -17,7 +17,7 @@ public class WaitAndLoad : MonoBehaviour {
 
     IEnumerator SendRequest(string url)
     {
-        HTTPRequest httpReq = (HTTPRequest)(GameObject.FindGameObjectWithTag("GlobalManager").GetComponent("HTTPRequest"));
+        HTTPRequest httpReq = gameObject.GetComponent<HTTPRequest>();
         httpObj = httpReq.GET(url);
         
         if(!httpObj.isDone)

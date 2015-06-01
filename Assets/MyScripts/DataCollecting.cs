@@ -15,7 +15,7 @@ public class DataCollecting : MonoBehaviour {
 	void Start () {
 	
 		gameData = new JSONClass();
-		user = new User("Razvanel","Brezulici", "male", 20, 19, 0.2f);
+		user = new User("Razvanel","Brezulici", "M", 20, 19, 2);
 	
 	}
 	
@@ -31,17 +31,20 @@ public class DataCollecting : MonoBehaviour {
 	public void printJsonToFile()
 	{
 		populateJson();
-
-		Debug.Log("printJson");
-		System.IO.Directory.CreateDirectory(Environment.CurrentDirectory + @"/DateStranse");
-		System.IO.File.WriteAllText(Environment.CurrentDirectory + @"/DateStranse/" + fileName(), gameData.ToString());
+        System.IO.Directory.CreateDirectory(Environment.CurrentDirectory + @"/DateStranse");
+        System.IO.File.WriteAllText(Environment.CurrentDirectory + @"/DateStranse/" + fileName(), gameObject.GetComponent<EventManager>().getJsonList().ToString());
+        gameObject.GetComponent<RequestManager>().sendGameData(gameData.ToString());
+   
+        
+        Debug.Log("printJson");
+		
 		
 	}
 	
 	private void populateJson()
 	{
-		gameData["user"] = user.getJson();
-		gameData["event_list"] = gameObject.GetComponent<EventManager>().getJsonList();
+       gameData["oculusUser"] = user.writeUserInJson();
+       gameData["oculusEvents"] = gameObject.GetComponent<EventManager>().getJsonList();
 	} 
 
 	private string fileName()

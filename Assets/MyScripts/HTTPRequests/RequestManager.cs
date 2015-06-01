@@ -21,13 +21,14 @@ public class RequestManager : MonoBehaviour {
 
     public void sendGameData(string jsonToSend)
     {
-        HTTPRequest request = (HTTPRequest)GameObject.FindGameObjectWithTag("GlobalManager").GetComponent("HttpRequest");
-        request.POST("http://172.17.254.180:8080/api/oculusUsersWithEvents", jsonToSend);
+
+        HTTPRequest request = gameObject.GetComponent<HTTPRequest>();
+        request.POST("http://192.168.1.105:8080/api/oculusUsersWithEvents", jsonToSend);
     }
 
     public void sendEvent(string jsonToSend)
     {
-        HTTPRequest request = (HTTPRequest)GameObject.FindGameObjectWithTag("GlobalManager").GetComponent("HttpRequest");
+        HTTPRequest request = gameObject.GetComponent<HTTPRequest>();
         request.POST("http://172.17.254.180:8080/api/oculusEventsWithUsers", jsonToSend);
     }
 }

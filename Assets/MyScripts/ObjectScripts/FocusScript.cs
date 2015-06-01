@@ -8,6 +8,7 @@ public class FocusScript : MonoBehaviour {
 	public bool debugMode;
 	public float timeNeededToEnterFocus;
 	public float timeNeededToExitFocus;
+    public string location;
 
 	private OVRPlayerController player;
 	private SMKCameraUtilities cameraRig;
@@ -109,7 +110,7 @@ public class FocusScript : MonoBehaviour {
 	void exitFocus()
 	{
 
-		FocusEvent focusEvent = new FocusEvent(gameObject.name,enteredFocusTime,exitFocusTime);
+		FocusEvent focusEvent = new FocusEvent(gameObject.name,"focus",location,enteredFocusTime,exitFocusTime);
 	
 		Object[] objs = GameObject.FindGameObjectsWithTag("GlobalManager");
 		if(objs != null)

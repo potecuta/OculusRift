@@ -12,10 +12,10 @@ namespace DataModel{
 		private string sex; // male or female
 		private int age; //years
 		private int smokingTime; //how long has he been smoking for. Years
-		private float timeSinceLastCigarette; // Hours
+		private int timeSinceLastCigarette; // Hours
 
 
-		public User(string firstName, string familyName, string sex, int age, int smokingTime, float timeSinceLastCigarette)
+		public User(string firstName, string familyName, string sex, int age, int smokingTime, int timeSinceLastCigarette)
 		{
 			if (firstName != null)
 			{
@@ -35,7 +35,7 @@ namespace DataModel{
 				this.familyName = "empty";
 			}
 
-			if ( (string.Compare(sex, "male") == 0) || (string.Compare(sex, "female") == 0))
+			if ( (string.Compare(sex, "M") == 0) || (string.Compare(sex, "F") == 0))
 			{
 				this.sex = sex;
 			}
@@ -73,18 +73,17 @@ namespace DataModel{
 		}
 
 
-		public JSONClass getJson()
-		{	
-			JSONClass jsonToReturn = new JSONClass();
+		public JSONClass writeUserInJson()
+		{
+            JSONClass obj = new JSONClass();
+			obj["first_name"] 							= firstName;
+            obj["family_name"] = familyName;
+            obj["sex"] = sex;
+            obj["age"].AsInt = age;
+            obj["smoking_time"].AsInt = smokingTime;
+            obj["time_since_last_cigarette"].AsInt = timeSinceLastCigarette;
 
-			jsonToReturn["first_name"] 							= firstName;
-			jsonToReturn["family_name"]							= familyName;
-			jsonToReturn["sex"] 								= sex;
-			jsonToReturn["age"].AsInt 							= age;
-			jsonToReturn["smoking_time"].AsInt 					= smokingTime;
-			jsonToReturn["time_since_last_cigarette"].AsFloat 	= timeSinceLastCigarette;
-
-			return jsonToReturn;
+            return obj;
 		}
 
 
