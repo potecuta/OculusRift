@@ -810,7 +810,6 @@ Transform:
   - {fileID: 177347089}
   - {fileID: 416673967}
   - {fileID: 1793155767}
-  - {fileID: 447341566}
   - {fileID: 1419655965}
   - {fileID: 235917283}
   - {fileID: 1498680123}
@@ -1159,6 +1158,7 @@ MonoBehaviour:
   debugMode: 0
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!1001 &151252719
 Prefab:
   m_ObjectHideFlags: 0
@@ -1547,6 +1547,7 @@ MonoBehaviour:
   debugMode: 1
   timeNeededToEnterFocus: 1
   timeNeededToExitFocus: 1
+  location: 
 --- !u!1 &216382083
 GameObject:
   m_PrefabParentObject: {fileID: 109320, guid: f13b4e556a0d7b04e9a5343a851abf67, type: 2}
@@ -1665,7 +1666,7 @@ Transform:
   - {fileID: 1267560704}
   - {fileID: 2046723699}
   m_Father: {fileID: 104415676}
-  m_RootOrder: 21
+  m_RootOrder: 20
 --- !u!1 &236502161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2243,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &416673963
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,6 +2276,7 @@ MonoBehaviour:
   debugMode: 0
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!23 &416673965
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2448,11 +2450,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 447341564}
   m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
-  m_LocalPosition: {x: 18.4947166, y: 13.2222061, z: -15.5730896}
+  m_LocalPosition: {x: 6.14999962, y: 17.6700001, z: -10.6599989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 104415676}
-  m_RootOrder: 19
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &451766523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2758,7 +2760,7 @@ Transform:
   - {fileID: 323117409}
   - {fileID: 770369391}
   m_Father: {fileID: 104415676}
-  m_RootOrder: 23
+  m_RootOrder: 22
 --- !u!1 &510399932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,6 +3807,7 @@ MonoBehaviour:
   debugMode: 0
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!23 &665666383
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3926,7 +3929,7 @@ Transform:
   - {fileID: 1323795095}
   - {fileID: 1083453862}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &685401593
 GameObject:
   m_ObjectHideFlags: 0
@@ -6396,6 +6399,7 @@ MonoBehaviour:
   debugMode: 0
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!1 &1169480151
 GameObject:
   m_ObjectHideFlags: 0
@@ -7590,7 +7594,7 @@ Transform:
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1400433882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7602,6 +7606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca98579807268944ad36bd37c520982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onScreenCanvasHUDComponent: {fileID: 0}
 --- !u!114 &1400433883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7783,7 +7788,7 @@ Transform:
   - {fileID: 1403117183}
   - {fileID: 1112563305}
   m_Father: {fileID: 104415676}
-  m_RootOrder: 20
+  m_RootOrder: 19
 --- !u!1 &1435167507
 GameObject:
   m_PrefabParentObject: {fileID: 109320, guid: f13b4e556a0d7b04e9a5343a851abf67, type: 2}
@@ -8229,7 +8234,7 @@ Transform:
   - {fileID: 1716068695}
   - {fileID: 987821451}
   m_Father: {fileID: 104415676}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!1 &1498901692
 GameObject:
   m_PrefabParentObject: {fileID: 173492, guid: f13b4e556a0d7b04e9a5343a851abf67, type: 2}
@@ -9296,7 +9301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1663706890
 Transform:
   m_ObjectHideFlags: 0
@@ -9432,6 +9437,7 @@ MonoBehaviour:
   debugMode: 0
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!1 &1674482476
 GameObject:
   m_ObjectHideFlags: 0
@@ -9647,6 +9653,7 @@ MonoBehaviour:
   debugMode: 0
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!1 &1701856928
 GameObject:
   m_ObjectHideFlags: 0
@@ -10312,6 +10319,7 @@ MonoBehaviour:
   debugMode: 0
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!20 &1764226817
 Camera:
   m_PrefabParentObject: {fileID: 2000002, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -11058,6 +11066,7 @@ MonoBehaviour:
   debugMode: 1
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!1001 &1857666418
 Prefab:
   m_ObjectHideFlags: 0
@@ -12286,7 +12295,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_LocalScale.y
@@ -12396,7 +12405,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2112030825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.1800003, y: 21.7800007, z: 137.229996}
+  m_LocalPosition: {x: -41.7599983, y: 21.7800007, z: 138.580002}
   m_LocalScale: {x: .769937694, y: .973337889, z: .75}
   m_Children: []
   m_Father: {fileID: 1793155767}
@@ -12415,6 +12424,7 @@ MonoBehaviour:
   debugMode: 0
   timeNeededToEnterFocus: 0
   timeNeededToExitFocus: 0
+  location: 
 --- !u!23 &2112030828
 MeshRenderer:
   m_ObjectHideFlags: 0
