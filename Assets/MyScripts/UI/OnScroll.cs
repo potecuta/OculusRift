@@ -13,12 +13,7 @@ public class OnScroll : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (togglel == null)
-        {
-            togglel = GameObject.Find("Form");
-
-            initPosition = togglel.transform.localPosition;
-        }
+       
 	}
 
     Vector3 initPosition;
@@ -26,10 +21,16 @@ public class OnScroll : MonoBehaviour {
 
     public void onScroll()
     {
+        if (togglel == null)
+        {
+            togglel = GameObject.Find("Form");
+
+            initPosition = togglel.transform.localPosition;
+        }
 
         Scrollbar scrollBar = GameObject.FindGameObjectWithTag("Scroll").GetComponent<Scrollbar>();
       
-      GameObject.Find ("Form").transform.localPosition = initPosition + new Vector3(0, scrollBar.value*300f,0);
+      GameObject.Find ("Form").transform.localPosition = initPosition + new Vector3(0, scrollBar.value*300,0);
     
     }
 }
