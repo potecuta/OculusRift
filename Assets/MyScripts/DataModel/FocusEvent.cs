@@ -34,6 +34,27 @@ namespace DataModel
 			this.exitFocusTime = exitTime;
 		}
 
+		public FocusEvent(string name, string type, string location, float enterTime){
+            if (location.Length == 0)
+            {
+                location = "NA";
+            }
+            if(name.Length == 0)
+            {
+                name = "NA";
+            }
+            if (type.Length == 0)
+            {
+                type = "NA";
+            }
+            
+            this.objectName = name;
+            this.type = type;
+            this.location = location;
+            this.enteredFocusTime = enterTime;
+		}
+
+
 		public string ObjectName{
 			get{ 
 				return objectName;
@@ -68,14 +89,51 @@ namespace DataModel
 			jsonToReturn ["name"] = objectName;
             jsonToReturn ["location"] = location;
             jsonToReturn["type"] = type;
-			//jsonToReturn ["entered_time"] = enterTime.ToString();
-			//jsonToReturn ["exit_time"] = exitTime.ToString();
-            double duratie = exitFocusTime - enteredFocusTime;
+			jsonToReturn ["entered_time"] = formatDate(enterTime);
+
+			Debug.Log(formatDate(enterTime));
+			jsonToReturn ["exit_time"] = formatDate(exitTime);
+            float duratie = exitFocusTime - enteredFocusTime;
 			jsonToReturn ["duration"].AsInt = (int)duratie; 
 
 			return jsonToReturn;
 			
 		}
 
+		private string formatDate(DateTime time)
+		{
+			string stringToReturn = "";
+
+			stringToReturn = time.Year.ToString () + '-';
+			if (time.Month < 10) {
+				stringToReturn += '0' + time.Month.ToString() + '-';
+			} else {
+				stringToReturn += time.Month.ToString() + '-';
+			}
+			if (time.Day < 10) {
+				stringToReturn += '0' + time.Day.ToString();
+			} else {
+				stringToReturn += time.Day.ToString();
+			}
+		
+			stringToReturn += 'T';
+			if (time.Hour < 10) {
+				stringToReturn += '0' + time.Hour.ToString() + ':';
+			} else {
+				stringToReturn += time.Hour.ToString()+ ':';
+			}
+			if (time.Minute < 10) {
+				stringToReturn += '0' + time.Minute.ToString() + ':';
+			} else {
+				stringToReturn += time.Minute.ToString()+ ':';
+			}
+			if (time.Second < 10) {
+				stringToReturn += '0' + time.Second.ToString() + 'Z';
+			} else {
+				stringToReturn += time.Second.ToString() + 'Z';
+			}
+
+			return stringToReturn;
+		}
 	}
 }

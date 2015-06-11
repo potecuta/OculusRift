@@ -31,9 +31,16 @@ public class DataCollecting : MonoBehaviour {
 	public void printJsonToFile()
 	{
 		populateJson();
-        System.IO.Directory.CreateDirectory(Environment.CurrentDirectory + @"/DateStranse");
-        System.IO.File.WriteAllText(Environment.CurrentDirectory + @"/DateStranse/" + fileName(), gameData.ToString());
-        gameObject.GetComponent<RequestManager>().sendGameData(gameData.ToString());
+        
+		string text = System.IO.File.ReadAllText(Environment.CurrentDirectory + @"/userConfig.txt");
+		string gameDataString = gameData.ToString ();
+
+		gameDataString = gameDataString.Insert (1, text);
+
+		System.IO.Directory.CreateDirectory(Environment.CurrentDirectory + @"/DateStranse");
+		System.IO.File.WriteAllText(Environment.CurrentDirectory + @"/DateStranse/" + fileName(), gameDataString);
+
+		gameObject.GetComponent<RequestManager>().sendGameData(gameDataString);
    
         
         Debug.Log("printJson");
@@ -43,7 +50,7 @@ public class DataCollecting : MonoBehaviour {
 	
 	private void populateJson()
 	{
-       gameData["oculusUser"] = user.writeUserInJson();
+       //gameData["oculusUser"] = user.writeUserInJson();
        gameData["oculusEventList"] = gameObject.GetComponent<EventManager>().getJsonList();
 	} 
 

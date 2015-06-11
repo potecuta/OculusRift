@@ -1,0 +1,7 @@
+"oculusUser":
+{
+"first_name":"Razvanel", 
+"family_name":"Brezulici", 
+"sex":"M", "age":"20", 
+"smoking_time":"19", 
+"time_since_last_cigarette":"2"},

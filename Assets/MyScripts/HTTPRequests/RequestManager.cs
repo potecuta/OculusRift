@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 using System.Threading;
 
 public class RequestManager : MonoBehaviour {
@@ -21,9 +23,10 @@ public class RequestManager : MonoBehaviour {
 
     public void sendGameData(string jsonToSend)
     {
+		string text = System.IO.File.ReadAllText(Environment.CurrentDirectory + @"/myConfig.txt");
 
         HTTPRequest request = gameObject.GetComponent<HTTPRequest>();
-        request.POST("http://192.168.1.105:8080/api/oculusUsersWithEvents", jsonToSend);
+        request.POST(text + "/api/oculusUsersWithEvents", jsonToSend);
     }
 
     public void sendEvent(string jsonToSend)

@@ -29,7 +29,7 @@ public class OnScroll : MonoBehaviour {
 
         Scrollbar scrollBar = GameObject.FindGameObjectWithTag("Scroll").GetComponent<Scrollbar>();
       
-      GameObject.Find ("Form").transform.localPosition = initPosition + new Vector3(0, scrollBar.value*7000f*Time.smoothDeltaTime,0);
+      GameObject.Find ("Form").transform.localPosition = initPosition + new Vector3(0, scrollBar.value*300f,0);
     
     }
 }

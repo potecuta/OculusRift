@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using System.Collections.Generic;
+using System;
+
 public class WaitAndLoad : MonoBehaviour {
 
     AsyncOperation loader;
@@ -10,7 +13,9 @@ public class WaitAndLoad : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        Application.OpenURL("www.google.com");
+		string text = System.IO.File.ReadAllText(Environment.CurrentDirectory + @"/myConfig.txt");
+		
+		Application.OpenURL(text);
         string url = "www.google.com";
         StartCoroutine(SendRequest(url));
     }
