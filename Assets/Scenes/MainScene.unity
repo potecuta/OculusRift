@@ -766,7 +766,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 192520364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &198714475
@@ -847,7 +847,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 198714478}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -870,7 +870,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 198714475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &233052798
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 311459643}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 311459640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &324011433
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 327191224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80600e0d36cbfeb4788c64254360b535, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &327191226
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 380969541}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -1656,7 +1656,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 380969538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &397639780
@@ -1924,6 +1924,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 510621711}
   - 114: {fileID: 510621712}
+  - 114: {fileID: 510621713}
   m_Layer: 5
   m_Name: toggle27
   m_TagString: Untagged
@@ -1991,10 +1992,33 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 510621713}
+        m_MethodName: setGender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &510621713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510621710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &555041905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,7 +2290,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631659536}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -2289,7 +2313,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 631659533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &673588176
@@ -2593,7 +2617,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 777775776}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -2616,7 +2640,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 777775773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &799727810
@@ -2825,7 +2849,7 @@ GameObject:
   - 114: {fileID: 851980001}
   - 114: {fileID: 851980000}
   m_Layer: 5
-  m_Name: InputField 1
+  m_Name: SmokingAgeInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3014,7 +3038,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867901437}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -3037,7 +3061,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 867901434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &899543957
@@ -3180,7 +3204,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 914299470}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -3203,7 +3227,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 914299467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &946049525
@@ -3472,7 +3496,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1051697860}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -3495,7 +3519,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1051697857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1058921791
@@ -3891,7 +3915,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1130819846}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -3914,7 +3938,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1130819843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1154190311
@@ -3995,7 +4019,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1154190314}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -4018,7 +4042,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1154190311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1179826582
@@ -4758,7 +4782,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1355517514}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -4781,7 +4805,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1355517511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1356328676
@@ -4924,7 +4948,7 @@ GameObject:
   - 114: {fileID: 1449671578}
   - 114: {fileID: 1449671577}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: AgeInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5180,7 +5204,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1480026980}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -5203,7 +5227,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480026977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1482081857
@@ -5531,7 +5555,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1510691501}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -5554,7 +5578,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1510691498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1574458259
@@ -5691,6 +5715,7 @@ GameObject:
   - 222: {fileID: 1603787499}
   - 114: {fileID: 1603787498}
   - 114: {fileID: 1603787497}
+  - 114: {fileID: 1603787501}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5796,6 +5821,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -246.040817}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &1603787501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603787496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627750896
 GameObject:
   m_ObjectHideFlags: 0
@@ -6566,6 +6602,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1931538903}
   - 114: {fileID: 1931538904}
+  - 114: {fileID: 1931538905}
   m_Layer: 5
   m_Name: toggle26
   m_TagString: Untagged
@@ -6633,10 +6670,33 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 510621713}
+        m_MethodName: setGender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &1931538905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931538902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1959028356
 GameObject:
   m_ObjectHideFlags: 0
@@ -7258,7 +7318,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2111132372}
+      - m_Target: {fileID: 192520367}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -7281,7 +7341,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2111132369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d38d021adc62649804b0a6d199920e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbed9ccb086e8042a2f45c6e84abe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2122344320

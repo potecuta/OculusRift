@@ -15,8 +15,10 @@ public class SubmitButtonScript : MonoBehaviour {
         {
             form = GameObject.Find("Form");
             selectScene = GameObject.Find("SelectScene");
+            selectScene.SetActive(false);
         }
-        selectScene.SetActive(false);
+        
+
 	}
 	
 	// Update is called once per frame
@@ -26,16 +28,31 @@ public class SubmitButtonScript : MonoBehaviour {
 
     public void addToScore()
     {
+        
         if(!gameObject.GetComponent<Toggle>().isOn)
             Globals.userScore -= Int32.Parse(name[name.Length - 1].ToString());
         else
         Globals.userScore += Int32.Parse(name[name.Length-1].ToString());
+
+        
+
+    }
+
+    public void setGender()
+    {
+        Toggle toggle = gameObject.GetComponent<Toggle>();
+        if (gameObject.GetComponent<Toggle>().isOn)
+            if (name == "F")
+                Globals.gender = "F";
+            else
+                if (name == "B")
+                    Globals.gender = "M";
     }
 
     public void postInfo()
     {
- //       string firstName = GameObject.Find("firstNameInputField").GetComponent<Text>().text;
-   //     string lastName = GameObject.Find("lastNameInputField").GetComponent<Text>().text;
+		string age = GameObject.Find ("AgeInputField").GetComponentInChildren<Text> ().text;
+		string smokingAge = GameObject.Find("SmokingAgeInputField").GetComponentInChildren<Text>().text;
      //   User newUser = new User(firstName, lastName, "M", 99, 100, 1);
       //  RequestManager rM = GameObject.FindObjectOfType<RequestManager>();
       //  SimpleJSON.JSONClass gameData = new SimpleJSON.JSONClass();
@@ -47,15 +64,18 @@ public class SubmitButtonScript : MonoBehaviour {
           //   Application.LoadLevel(1);
         form.SetActive(false);
          selectScene.SetActive(true);
-       
+         GameObject.Find("Scrollbar").SetActive(false);       
     }
+
     public void LoadForest()
     {
+		GameObject.Find ("GlobalManager").GetComponent<CameraManager> ().activateOculusCamera ();
         Application.LoadLevel(2);
     }
 
     public void LoadKitchen()
     {
+		GameObject.Find ("GlobalManager").GetComponent<CameraManager> ().activateOculusCamera ();
         Application.LoadLevel(1);
     }
 }
