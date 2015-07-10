@@ -15,7 +15,6 @@ public class DataCollecting : MonoBehaviour {
 	void Start () {
 	
 		gameData = new JSONClass();
-		user = new User("Razvanel","Brezulici", "M", 20, 19, 2);
 	
 	}
 	
@@ -34,7 +33,9 @@ public class DataCollecting : MonoBehaviour {
         
 		string text = System.IO.File.ReadAllText(Environment.CurrentDirectory + @"/userConfig.txt");
 		string gameDataString = gameData.ToString ();
-
+		text = text.TrimEnd ('}');
+		text = text.TrimStart ('{');
+		text = text + "},";
 		gameDataString = gameDataString.Insert (1, text);
 
 		System.IO.Directory.CreateDirectory(Environment.CurrentDirectory + @"/DateStranse");
@@ -56,11 +57,8 @@ public class DataCollecting : MonoBehaviour {
 
 	private string fileName()
 	{
-		string fullName = string.Concat(user.FirstName, "_", user.FamilyName, "_");
-		string fileName = string.Concat(fullName,
-										DateTime.Now.ToShortDateString(),
-										".txt"
-										);
+		string text = System.IO.File.ReadAllText(Environment.CurrentDirectory + @"/userId.txt");
+		string fileName = string.Concat(text,".txt");
 
 		fileName = fileName.Replace("/","_");
 

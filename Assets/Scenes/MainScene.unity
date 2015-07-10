@@ -847,7 +847,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 198714478}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 311459643}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 380969541}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -2290,7 +2290,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 631659536}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -2617,7 +2617,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 777775776}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -3038,7 +3038,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 867901437}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -3204,7 +3204,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 914299470}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -3496,7 +3496,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 1051697860}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -3915,7 +3915,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 1130819846}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -4019,7 +4019,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 1154190314}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -4782,7 +4782,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 1355517514}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -5204,7 +5204,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 1480026980}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -5555,7 +5555,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 1510691501}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:
@@ -7318,7 +7318,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192520367}
+      - m_Target: {fileID: 2111132372}
         m_MethodName: addToScore
         m_Mode: 1
         m_Arguments:

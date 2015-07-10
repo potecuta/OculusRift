@@ -1,20 +1,25 @@
 ﻿using UnityEngine;
+using System.IO;
 using System.Collections;
 using System.Collections.Specialized;
 using UnityEngine.UI;
 using DataModel;
 using System;
+using System.Diagnostics;
 
 public class SubmitButtonScript : MonoBehaviour {
 
     GameObject form;
     GameObject selectScene;
+	GameObject DorintaFumat;
    // Use this for initialization
 	void Start () {
         if (selectScene == null && name=="GameObject")
         {
             form = GameObject.Find("Form");
             selectScene = GameObject.Find("SelectScene");
+			DorintaFumat = GameObject.Find("DorintaFumat");
+			DorintaFumat.SetActive(false);
             selectScene.SetActive(false);
         }
         
@@ -34,6 +39,7 @@ public class SubmitButtonScript : MonoBehaviour {
         else
         Globals.userScore += Int32.Parse(name[name.Length-1].ToString());
 
+		UnityEngine.Debug.Log(Globals.userScore);
         
 
     }
@@ -47,35 +53,53 @@ public class SubmitButtonScript : MonoBehaviour {
             else
                 if (name == "B")
                     Globals.gender = "M";
+		UnityEngine.Debug.Log (Globals.gender);
     }
 
     public void postInfo()
     {
-		string age = GameObject.Find ("AgeInputField").GetComponentInChildren<Text> ().text;
-		string smokingAge = GameObject.Find("SmokingAgeInputField").GetComponentInChildren<Text>().text;
-     //   User newUser = new User(firstName, lastName, "M", 99, 100, 1);
-      //  RequestManager rM = GameObject.FindObjectOfType<RequestManager>();
-      //  SimpleJSON.JSONClass gameData = new SimpleJSON.JSONClass();
-       // gameData["oculusUser"] = newUser.writeUserInJson();
-       // string user = gameData.ToString();
-       // rM.sendGameData(user);
+		string age = GameObject.Find ("AgeInputField").transform.GetChild(2).GetComponent<Text> ().text;
+		string smokingAge = GameObject.Find("SmokingAgeInputField").transform.GetChild(2).GetComponent<Text> ().text;
 
-        //if(Globals.userID!=0)
-          //   Application.LoadLevel(1);
+        User newUser = new User("", "", Globals.gender, age, smokingAge, 0, Globals.userScore);
+
+        RequestManager rM = GameObject.FindObjectOfType<RequestManager>();
+        SimpleJSON.JSONClass gameData = new SimpleJSON.JSONClass();
+        gameData["oculusUser"] = newUser.writeUserInJson();
+        string user = gameData.ToString();
+        //rM.sendGameData(user);
+		System.IO.File.WriteAllText(Environment.CurrentDirectory + @"/Kitchen/userConfig.txt", user);
+
+		string text = System.IO.File.ReadAllText(Environment.CurrentDirectory + @"/Kitchen/userId.txt");
+		if (text.Length == 0) {
+			System.IO.File.WriteAllText (Environment.CurrentDirectory + @"/Kitchen/userId.txt", "1");
+		} else {
+			int id = Int32.Parse(text) + 1;
+			System.IO.File.WriteAllText(Environment.CurrentDirectory + @"/Kitchen/userId.txt", id.ToString());
+
+		}
+
+
         form.SetActive(false);
-         selectScene.SetActive(true);
-         GameObject.Find("Scrollbar").SetActive(false);       
-    }
-
-    public void LoadForest()
-    {
-		GameObject.Find ("GlobalManager").GetComponent<CameraManager> ().activateOculusCamera ();
-        Application.LoadLevel(2);
+        selectScene.SetActive(true);
+        GameObject.Find("Scrollbar").SetActive(false);       
     }
 
     public void LoadKitchen()
     {
-		GameObject.Find ("GlobalManager").GetComponent<CameraManager> ().activateOculusCamera ();
-        Application.LoadLevel(1);
+
+		var processStartInfo = new ProcessStartInfo(Directory.GetCurrentDirectory() 
+		                                            + @"\Kitchen\Kitchen_DirectToRift.exe");
+		processStartInfo.WorkingDirectory = Path.GetDirectoryName(Directory.GetCurrentDirectory() + @"\Kitchen\Kitchen_DirectToRift.exe");
+		Process.Start(processStartInfo);
+		//Application.LoadLevel(2);
+    }
+
+    public void LoadForest()
+    {
+		var processStartInfo = new ProcessStartInfo(Directory.GetCurrentDirectory() 
+		                                            + @"\Forest\Forest_DirectToRift.exe");
+		processStartInfo.WorkingDirectory = Path.GetDirectoryName(Directory.GetCurrentDirectory() + @"\Forest\Forest_DirectToRift.exe");
+		Process.Start(processStartInfo);
     }
 }

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
+
 
 public class HTTPRequest : MonoBehaviour {
 
@@ -42,6 +44,10 @@ public class HTTPRequest : MonoBehaviour {
 
 
         StartCoroutine(WaitForRequest(www));
+
+
+		System.IO.File.WriteAllText(Environment.CurrentDirectory + "temp.txt", www.responseHeaders["userId"]);
+
         return www;
     }
 

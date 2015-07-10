@@ -10,12 +10,13 @@ namespace DataModel{
 		private string firstName;
 		private string familyName;
 		private string sex; // male or female
-		private int age; //years
-		private int smokingTime; //how long has he been smoking for. Years
+		private string age; //years
+		private string smokingTime; //how long has he been smoking for. Years
 		private int timeSinceLastCigarette; // Hours
+		private int score;
 
 
-		public User(string firstName, string familyName, string sex, int age, int smokingTime, int timeSinceLastCigarette)
+		public User(string firstName, string familyName, string sex, string age, string smokingTime, int timeSinceLastCigarette, int score)
 		{
 			if (firstName != null)
 			{
@@ -44,23 +45,13 @@ namespace DataModel{
 				this.sex = "";
 			}
 
-			if ( age >= 18  && age < 100)
-			{
-				this.age = age;
-			}
-			else
-			{
-				this.age = -1;
-			}
 
-			if ( smokingTime > 0)
-			{
-				this.smokingTime = smokingTime;
-			}
-			else
-			{
-				this.smokingTime = -1;
-			}
+			this.age = age;
+			
+
+
+			this.smokingTime = smokingTime;
+		
 
 			if ( timeSinceLastCigarette > 0)
 			{
@@ -70,18 +61,21 @@ namespace DataModel{
 			{
 				this.timeSinceLastCigarette = -1;
 			}
+
+			this.score = score;
 		}
 
 
 		public JSONClass writeUserInJson()
 		{
             JSONClass obj = new JSONClass();
-			obj["first_name"] 							= firstName;
-            obj["family_name"] = familyName;
+			obj["first_name"] 							= "";
+            obj["family_name"] = "";
             obj["sex"] = sex;
-            obj["age"].AsInt = age;
-            obj["smoking_time"].AsInt = smokingTime;
-            obj["time_since_last_cigarette"].AsInt = timeSinceLastCigarette;
+            obj["age"] = age;
+            obj["smoking_time"] = smokingTime;
+            obj["time_since_last_cigarette"].AsInt = 0;
+			obj ["form_score"].AsInt = score;
 
             return obj;
 		}
@@ -107,13 +101,13 @@ namespace DataModel{
 			}
 		}
 
-		public int Age{
+		public string Age{
 			get{ 
 				return age;
 			}
 		}
 		
-		public int SmokingTime{
+		public string SmokingTime{
 			get{ 
 				return smokingTime;
 			}
